@@ -1,5 +1,5 @@
 # fact-crontab-api
-É uma api que disponibiliza fatos sobre gatos e/ou felinos. Utilizando tarefas em background, a sua base de dados é populado a partir da API Original [Cat Fact API](https://catfact.ninja/), a qual é o modelo para essa. No entando difereante da API original, que disponibiliza os textos em Inglês, essa api disponiliza os textos em Português, traduzidos a partir de bibliotecas de terceiros.
+É uma api que disponibiliza fatos sobre gatos e/ou felinos. Utilizando tarefas em background, a sua base de dados é populado a partir da API original [Cat Fact API](https://catfact.ninja/), a qual é o modelo para essa. No entando diferente da API original, que disponibiliza os textos em Inglês, essa api disponiliza os textos em Português.
 
 Para as tarefas em background foi utilizada a biblioteca `django-crontab`, onde sua configuração é bem simples, registrar nos `INSTALLED_APPS` 
 ```python
@@ -18,8 +18,11 @@ e a função que será executada, que deverá ser criada no arquivo `cron.py` em
 def my_scheduled_job():
     pass
 ```
+## Endpoints
+- /api/facts - Lista varios fatos.
+- /api/fact - Lista um fato randomicamente.
 
-### Frameworks e Bibliotecas
+## Frameworks e Bibliotecas
 - [django-crontab](https://pypi.org/project/django-crontab/)
 - [Django REST framawork](https://www.django-rest-framework.org/)
 - [Django](https://www.djangoproject.com/)
